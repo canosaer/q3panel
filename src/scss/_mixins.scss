@@ -1,0 +1,48 @@
+@use 'variables';
+
+@mixin landscape {
+    @media (min-width: 768px){
+      @content;
+    }
+  }
+  
+@mixin medium-screen {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin wide-screen {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin inner-card-format{
+  padding: 2rem;
+	color: variables.$green;
+	text-align: center;
+}
+
+@mixin card-button-format{
+  margin: 2.675rem auto auto;
+  border: 2px solid variables.$green;
+  line-height: 1.5;
+
+  &:hover{
+    background:variables.$green;
+    color: white;
+  }
+}
+
+@mixin card-heading-format{
+  font-size: 1.75rem;
+  margin: 1rem 0 0rem;
+}
+
+@mixin wavy-lines{
+	content:"";
+	position: absolute;
+	background: url(../../src/img/wavy.png);
+	background-position: center;
+}
